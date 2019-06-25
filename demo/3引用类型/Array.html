@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array的几种用法</title>
+</head>
+
+<body>
+
+    <div id="showNumbers"></div>
+    <button id="reduce">reduce方法</button>
+    <div id="result"></div>
+
+    <script>
+        var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+        var show = document.getElementById("showNumbers");
+        show.innerHTML = numbers;       
+        var result = document.getElementById("result")
+
+
+        var reduce = document.getElementById("reduce")
+        reduce.addEventListener('click', function () {
+            var reduce = numbers.reduce((pre, cur) => {
+                return pre + cur
+            })
+            result.innerHTML = reduce
+        })
+
+    </script>
+</body>
+
+</html>
